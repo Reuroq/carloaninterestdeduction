@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Car Loan Interest Deduction Calculator (Savings Estimator)</title>
+<meta name="description" content="Estimate your first-year deductible car-loan interest and tax savings, including the income phase-out. Free calculator using the OBBBA 2025–2028 rules.">
+<link rel="canonical" href="https://carloaninterestdeduction.com/savings-calculator.html">
+<meta property="og:title" content="Car Loan Interest Deduction Calculator (Savings Estimator)"><meta property="og:description" content="Estimate your first-year deductible car-loan interest and tax savings, including the income phase-out. Free calculator using the OBBBA 2025–2028 rules.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://carloaninterestdeduction.com/savings-calculator.html">
+<meta property="og:image" content="https://carloaninterestdeduction.com/img/og.png">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4S8G485DJ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-P4S8G485DJ");</script>
+</head><body>
+<header class="hd"><div class="wrap hdrow">
+<a class="brand" href="/"><span class="bmk">CLI</span><span class="bnm">Car Loan Interest Deduction</span></a>
+<button class="navtog" aria-label="Menu" onclick="document.body.classList.toggle('navopen')">&#9776;</button>
+<nav class="nav"><a href="/eligibility-checker.html">Eligibility Checker</a><a href="/savings-calculator.html">Savings Calculator</a><a href="/who-qualifies.html">Who Qualifies</a><a href="/income-limits.html">Income Limits</a><a href="/how-to-claim.html">How to Claim</a><a href="/faq.html">FAQ</a></nav>
+</div></header>
+<main>
+<section class="s"><div class="wrap">
+  <p class="crumb"><a href="/">Home</a> &rsaquo; Savings Calculator</p>
+  <h1>How much is the car-loan interest deduction worth?</h1>
+  <p class="muted prose">Enter your loan and income to estimate the <strong>deductible interest</strong> and your <strong>tax savings</strong>,
+  after the income phase-out. Calculations use the verified rules (interest-only, $10,000 cap, $200-per-$1,000 phase-out). Runs in your browser.</p>
+  <div class="tool" id="calc">
+    <div class="grid g2">
+      <div class="field"><label>Loan amount <span class="hint">amount financed</span></label><input id="calc-amount" type="number" value="40000" min="0" step="500"></div>
+      <div class="field"><label>Interest rate (APR %)</label><input id="calc-apr" type="number" value="7.0" min="0" step="0.1"></div>
+      <div class="field"><label>Loan term (months)</label><input id="calc-term" type="number" value="60" min="6" step="6"></div>
+      <div class="field"><label>Your income (MAGI) <span class="hint">≈ your AGI for most people</span></label><input id="calc-magi" type="number" value="80000" min="0" step="1000"></div>
+    </div>
+    <div class="field"><label>Filing status</label>
+      <div class="seg" id="calc-filing"><button data-v="single" class="on">Single</button><button data-v="mfj">Married, joint</button></div></div>
+    <div class="field"><label>Your marginal tax bracket <span class="hint">for the savings estimate</span></label>
+      <div class="seg" id="calc-bracket"><button data-v="0.12">12%</button><button data-v="0.22" class="on">22%</button><button data-v="0.24">24%</button><button data-v="0.32">32%</button></div></div>
+    <div id="calc-out"></div>
+  </div>
+  <div class="prose">
+  <div class="flag"><span class="flagi">&#9888;</span><div>Estimate only. The phase-out reduces the <b>$10,000 cap</b> (by $200 per $1,000 of income over your threshold), not your interest directly &mdash; so if your interest is below the reduced cap, the cap may not bite. Head-of-household and married-filing-separately thresholds are not yet specified in IRS guidance. <a class="src" href="https://tax.thomsonreuters.com/news/2025-2028-vehicle-loan-interest-deduction-what-you-need-to-know/" target="_blank" rel="nofollow noopener">Thomson Reuters</a></div></div>
+  <p>See the full <a href="/income-limits.html">income limits &amp; phase-out</a> rules, or learn <a href="/how-to-claim.html">how to claim</a> it.</p>
+  </div>
+</div></section>
+</main>
+<div class="discl wrap"><strong>Not tax advice.</strong> Educational information about the federal car-loan interest
+deduction, current as of June 2026. The IRS rules are <em>proposed regulations</em> and could change &mdash; verify with the
+<a href="https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors" rel="nofollow">IRS</a>
+or a tax professional before filing.</div>
+<footer class="ft"><div class="wrap">
+<div class="ftcols"><div><div class="ftbrand">Car Loan Interest Deduction</div>
+<p class="muted">An independent, regularly-updated guide to the One Big Beautiful Bill Act auto-loan interest deduction (tax years 2025&ndash;2028). We are not affiliated with the IRS or any government agency.</p></div>
+<nav class="ftnav"><a href="/eligibility-checker.html">Eligibility Checker</a><a href="/savings-calculator.html">Savings Calculator</a><a href="/who-qualifies.html">Who Qualifies</a><a href="/us-assembled.html">U.S. Assembly Check</a><a href="/used-cars-leases.html">Used Cars &amp; Leases</a><a href="/refinancing.html">Refinancing</a><a href="/income-limits.html">Income Limits &amp; Phaseout</a><a href="/how-to-claim.html">How to Claim</a><a href="/which-years.html">Which Years (Sunset)</a><a href="/vehicle-types.html">Vehicle Types</a><a href="/negative-equity.html">Negative Equity</a><a href="/myths.html">Myths &amp; Mistakes</a><a href="/faq.html">FAQ</a><a href="/sources.html">Sources &amp; Method</a><a href="/about.html">About</a></nav></div>
+<div class="ftbar muted">&copy; 2026 carloaninterestdeduction.com &middot; Updated June 2026 &middot; Not tax, legal, or financial advice.</div>
+</div></footer>
+<script src="/app.js" defer></script>
+</body></html>
