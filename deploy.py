@@ -120,6 +120,16 @@ if __name__ == "__main__":
             cd = item.get("customDomain", item)
             print(f"  {cd.get('name')}: verified={cd.get('verificationStatus')} resolves={cd.get('domainResolves')}")
 
+    elif cmd == "env":
+        sid = sys.argv[2] if len(sys.argv) > 2 else SERVICE_ID
+        ga  = sys.argv[3] if len(sys.argv) > 3 else ""
+        idx = sys.argv[4] if len(sys.argv) > 4 else ""
+        for k, v in [("CLI_GA_ID", ga), ("CLI_INDEXNOW_KEY", idx)]:
+            if not v: continue
+            st, data = req(f"https://api.render.com/v1/services/{sid}/env-vars/{k}",
+                           method="PUT", headers=render_h(), data={"value": v})
+            print(f"  set {k}={v}: http={st} {'OK' if st in (200,201) else json.dumps(data)[:200]}")
+
     elif cmd == "deploy":
         sid = sys.argv[2] if len(sys.argv) > 2 else SERVICE_ID
         st, data = req(f"https://api.render.com/v1/services/{sid}/deploys", method="POST",

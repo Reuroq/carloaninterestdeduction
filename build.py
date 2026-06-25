@@ -14,6 +14,7 @@ ASOF = "June 2026"
 SITE = "Car Loan Interest Deduction"
 DOMAIN = "carloaninterestdeduction.com"
 GA_ID = os.environ.get("CLI_GA_ID", "")          # set at deploy
+INDEXNOW_KEY = os.environ.get("CLI_INDEXNOW_KEY", "")   # served as /<key>.txt for IndexNow
 
 # ---------------------------------------------------------------- nav
 NAV = [
@@ -531,7 +532,9 @@ def render():
     open(os.path.join(DIST,"sitemap.xml"),"w",encoding="utf-8").write(sm)
     open(os.path.join(DIST,"robots.txt"),"w",encoding="utf-8").write(
         f"User-agent: *\nAllow: /\nSitemap: https://{DOMAIN}/sitemap.xml\n")
-    print(f"Built {len(PAGES)} pages -> {DIST}")
+    if INDEXNOW_KEY:                                 # IndexNow ownership key file
+        open(os.path.join(DIST,f"{INDEXNOW_KEY}.txt"),"w",encoding="utf-8").write(INDEXNOW_KEY)
+    print(f"Built {len(PAGES)} pages -> {DIST}  (indexnow={'yes' if INDEXNOW_KEY else 'no'})")
 
 import re
 def _strip(s): return re.sub("<[^>]+>","",s).replace("&mdash;","—").replace("&rsquo;","’").replace("&ldquo;","“").replace("&rdquo;","”").replace("&amp;","&").replace("&rarr;","→").strip()
