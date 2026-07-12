@@ -50,7 +50,7 @@ def ga_snippet():
             f'gtag("js",new Date());gtag("config","{GA_ID}");</script>')
 
 def shell(slug, title, desc, body, extra_head="", extra_js=""):
-    canon = f"https://{DOMAIN}{slug}"
+    canon = f"https://{DOMAIN}{'/' if slug == '/index.html' else slug}"  # homepage canonical = /, matching the sitemap
     nav = "".join(f'<a href="{h}">{html.escape(t)}</a>' for t, h in NAV)
     foot = "".join(f'<a href="{h}">{html.escape(t)}</a>' for t, h in FOOTER_LINKS)
     return f"""<!doctype html><html lang="en"><head>
